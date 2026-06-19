@@ -1,0 +1,70 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #10b981; /* Fresh Emerald/Mint */
+  --color-brand-secondary: #0ea5e9; /* Sky Blue */
+  --color-brand-accent: #f43f5e; /* Coral pink to catch eye */
+  --color-brand-dark: #0f172a; /* Slate 900 for modern deep styling */
+  --color-brand-cream: #fafaf9; /* Stone 50 warm background */
+  
+  --font-sans: 'Pretendard', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer utilities {
+  /* Cute blinking or neon pulsing for high-school vibe */
+  .pulse-border {
+    position: relative;
+  }
+  .pulse-border::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #10b981, #0ea5e9);
+    z-index: -1;
+    opacity: 0.7;
+    filter: blur(4px);
+    animation: borderPulse 2s infinite ease-in-out;
+  }
+
+  .turtle-float {
+    animation: turtleFloat 3.5s ease-in-out infinite;
+  }
+}
+
+@keyframes borderPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes turtleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+/* Custom scrollbars for details panel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.4);
+}

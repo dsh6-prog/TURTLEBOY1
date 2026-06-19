@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: Remix: Turtle Boy",
+  "description": "Quickly find your career path by matching interests and subjects to university departments, industries, and professional jobs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
